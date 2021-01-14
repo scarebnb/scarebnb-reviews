@@ -1,6 +1,10 @@
 const express = require('express');
+const db = require('./db');
+const router = require('./router.js');
 
 const app = express();
+
+app.use('/tests', router);
 
 app.use(express.static(__dirname + '/../client/public'));
 
