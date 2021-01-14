@@ -8,7 +8,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>Edit This!</h1>
+        <h1>REACT is LIVE</h1>
       </div>
     )
   }
