@@ -1,1 +1,1 @@
-exports.seed = require('./seed.js');
+exports.reviews = require('./reviews.js');
