@@ -1,3 +1,5 @@
+DROP DATABASE `airbnb`;
+
 CREATE DATABASE IF NOT EXISTS `airbnb`;
 
 USE `airbnb`;
@@ -10,9 +12,9 @@ USE `airbnb`;
 DROP TABLE IF EXISTS `locations`;
 
 CREATE TABLE `locations` (
-  `id` INTEGER NOT NULL AUTO_INCREMENT NOT NULL,
-  `name` MEDIUMTEXT NOT NULL,
-  PRIMARY KEY (`id`)
+  `location_id` INTEGER AUTO_INCREMENT NOT NULL,
+  `name` TEXT NOT NULL,
+  PRIMARY KEY (`location_id`)
 );
 
 -- ---
@@ -23,65 +25,30 @@ CREATE TABLE `locations` (
 DROP TABLE IF EXISTS `reviews`;
 
 CREATE TABLE `reviews` (
-  `id` INTEGER NOT NULL AUTO_INCREMENT NOT NULL,
-  `name` VARCHAR(40) NOT NULL NOT NULL,
+  `reviews_id` INTEGER AUTO_INCREMENT NOT NULL,
+  `location_id` INTEGER NOT NULL,
+  `name` VARCHAR(40) NOT NULL,
   `avatar` MEDIUMTEXT NOT NULL,
-  `date` VARCHAR(40) NOT NULL,
+  `date`  VARCHAR(60) NOT NULL,
   `review` TEXT NOT NULL,
-  PRIMARY KEY (`id`)
-);
-
--- ---
--- Table 'ratings'
---
--- ---
-
-DROP TABLE IF EXISTS `ratings`;
-
-CREATE TABLE `ratings` (
-  `id` INTEGER NOT NULL AUTO_INCREMENT NOT NULL,
   `cleanliness` INTEGER NOT NULL,
   `accuracy` INTEGER NOT NULL,
   `comm` INTEGER NOT NULL,
   `location` INTEGER NOT NULL,
   `check_in` INTEGER NOT NULL,
   `value` INTEGER NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`reviews_id`)
 );
 
--- ---
--- Table 'tags'
---
--- ---
 
 DROP TABLE IF EXISTS `tags`;
 
 CREATE TABLE `tags` (
-  `id` INTEGER NOT NULL AUTO_INCREMENT NOT NULL,
-  `name` INTEGER NOT NULL,
-  PRIMARY KEY (`id`)
+  `tags_id` INTEGER AUTO_INCREMENT NOT NULL,
+  `review_id` INTEGER NOT NULL,
+  `name` TEXT NOT NULL,
+  PRIMARY KEY (`tags_id`)
 );
-
--- ---
--- Foreign Keys
--- ---
-
-ALTER TABLE `reviews` ADD FOREIGN KEY (id) REFERENCES `locations` (`id`);
-ALTER TABLE `ratings` ADD FOREIGN KEY (id) REFERENCES `reviews` (`id`);
-ALTER TABLE `tags` ADD FOREIGN KEY (id) REFERENCES `ratings` (`id`);
-
--- ---
--- Test Data
--- ---
-
--- INSERT INTO `locations` (`id`,`name`) VALUES
--- ('','');
--- INSERT INTO `reviews` (`id`,`name`,`avatar`,`date`) VALUES
--- ('','','','');
--- INSERT INTO `ratings` (`id`,`cleanliness`,`accuracy`,`comm`,`location`,`check_in`,`value`) VALUES
--- ('','','','','','','');
--- INSERT INTO `tags` (`id`,`name`) VALUES
--- ('','');
 
 -- ---
 -- excute file from terminal
