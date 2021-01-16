@@ -1,6 +1,9 @@
 const express = require('express');
+const controllers = require('./controllers');
 
 const app = express();
+
+app.get('/reviews', controllers.reviews.get);
 
 app.use(express.static(__dirname + '/../client/public'));
 
