@@ -4,9 +4,9 @@ const getRand = (min, max) =>  {
 }
 
 const tagGenerator = () => {
-  tagSelection = ['Reponsive host', 'Romfortable bends', 'Easy check-in',
+  tagSelection = ['Responsive host', 'Comfortable beds', 'Easy check-in',
     'Great location', 'Great restaurants', 'Great views', 'Helpful host',
-    'Thoughful touches', 'Friendly host', 'A guiet neighborhood'];
+    'Thoughful touches', 'Friendly host', 'A quiet neighborhood'];
 
     return tagSelection[getRand(1, tagSelection.length)];
 }

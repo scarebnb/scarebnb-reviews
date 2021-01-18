@@ -3,7 +3,7 @@ const controllers = require('./controllers');
 
 const app = express();
 
-app.get('/reviews', controllers.reviews.get);
+app.get('/reviews/:id', controllers.reviews.get);
 
 app.use(express.static(__dirname + '/../client/public'));
 

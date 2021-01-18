@@ -8,8 +8,13 @@ const { getRand, tagGenerator } = require('./helpers.js');
 
 /*** Data Seed Methods ***/
 const addLocations = () => {
+  const street = faker.address.streetAddress();
+  const city = faker.address.city();
+  const state = faker.address.state();
+  const zip = faker.address.zipCode();
+  const address = `${street}, ${city}, ${state} ${zip}`;
   // [location]
-  const locations = [faker.address.streetAddress()];
+  const locations = [address];
 
   const locationQuery = 'INSERT INTO locations (name) VALUES (?);';
   db.query(locationQuery, locations, (err) => {
@@ -37,7 +42,7 @@ const addReviews = (listing_id) => {
 const addTags = (review_id) => {
   // [name, review_id]
   const tags = [tagGenerator(), review_id]
-  const tagsQuery = 'INSERT INTO tags (name, review_id) VALUES (?, ?);';
+  const tagsQuery = 'INSERT INTO tags (tag, review_id) VALUES (?, ?);';
 
   db.query(tagsQuery, tags, (err) => {
     err ? console.error('Tags: ', err) : null;
@@ -46,16 +51,18 @@ const addTags = (review_id) => {
 
 
 /*** Seed Data for 100 listings ***/
+let review_id = 0;
 for (let i = 1; i <= 100; i++) {
   addLocations();
 
   // for every listing seed random number of reviews
   for (let r = 1; r <= getRand(6, 100); r++) {
     addReviews(i);
-
+    review_id++;
     // for every review add random tags to post
     for (let t = 1; t <= getRand(1, 10); t++) {
-      addTags(r);
+      // review_id connects the tags that specific review
+      addTags(review_id);
     }
   }
 }

@@ -25,7 +25,7 @@ CREATE TABLE `locations` (
 DROP TABLE IF EXISTS `reviews`;
 
 CREATE TABLE `reviews` (
-  `reviews_id` INTEGER AUTO_INCREMENT NOT NULL,
+  `review_id` INTEGER AUTO_INCREMENT NOT NULL,
   `location_id` INTEGER NOT NULL,
   `name` VARCHAR(40) NOT NULL,
   `avatar` MEDIUMTEXT NOT NULL,
@@ -37,17 +37,17 @@ CREATE TABLE `reviews` (
   `location` INTEGER NOT NULL,
   `check_in` INTEGER NOT NULL,
   `value` INTEGER NOT NULL,
-  PRIMARY KEY (`reviews_id`)
+  PRIMARY KEY (`review_id`)
 );
 
 
 DROP TABLE IF EXISTS `tags`;
 
 CREATE TABLE `tags` (
-  `tags_id` INTEGER AUTO_INCREMENT NOT NULL,
+  `tag_id` INTEGER AUTO_INCREMENT NOT NULL,
   `review_id` INTEGER NOT NULL,
-  `name` TEXT NOT NULL,
-  PRIMARY KEY (`tags_id`)
+  `tag` TEXT NOT NULL,
+  PRIMARY KEY (`tag_id`)
 );
 
 -- ---
