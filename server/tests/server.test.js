@@ -1,10 +1,9 @@
 const request = require('supertest');
-const app = require('./app.js');
+const app = require('./testApp.js');
 const db = require('../db');
 const { getRand } = require('../seed/helpers.js');
 
 describe('Test server routes and responses', () => {
-
   test('should respond to GET request based on random id', () => {
     return request(app)
     .get(`/reviews/${getRand(1,100)}`)
@@ -52,7 +51,7 @@ describe('Test server routes and responses', () => {
     });
   });
 
-  test('reviews avatart should be valid URL', () => {
+  test('reviews avatar should be valid URL', () => {
     return request(app)
     .get(`/reviews/${getRand(1,100)}`)
     .then(response => {
@@ -61,8 +60,6 @@ describe('Test server routes and responses', () => {
       expect(url.protocol).toBe('https:');
     });
   });
-
-
 
   // close db connection that is started by server
   afterAll((done) => {

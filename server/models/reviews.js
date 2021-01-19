@@ -9,11 +9,14 @@ const getAll = (id, cb) => {
   ON r.review_id = t.review_id WHERE l.location_id=${id}`;
 
   db.query(reviews, (err, result) => {
-    err ? cb(err, null) : cb(null, result);
-  })
+    if (err) {
+      cb(err, null);
+    }
 
+    cb(null, result);
+  });
 };
 
 module.exports = {
-  getAll
+  getAll,
 };
