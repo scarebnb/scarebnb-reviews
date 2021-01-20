@@ -1,0 +1,31 @@
+* {
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+}
+.spacing {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+.header{
+  grid-area: header;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding-bottom: 32px;
+}
+.star {
+  font-family: Airmoji_Standalone !important;
+  font-weight: normal !important;
+  background-color: #ff7779;
+}
+.column {
+  float: left;
+  width: 50%;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.valueSpace {
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+}
