@@ -1,8 +1,9 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import styles from '../styles/reviewAvg.module.css';
+import Tags from './Tags.jsx';
 
-const ReviewAvgs = ({ averages }) => {
+const ReviewAvgs = ({ averages, tags }) => {
   const {
     overall,
     totalReviews,
@@ -78,13 +79,13 @@ const ReviewAvgs = ({ averages }) => {
           </div>
         </div>
       </div>
-      <div>TAGS</div>
+      <div className={`${styles.row} ${styles.spacing}`}>
+        {tags.map((tag, i) => (
+          <Tags tag={tag} key={i} />
+        ))}
+      </div>
     </div>
   );
-};
-
-ReviewAvgs.propTypes = {
-  averages: propTypes.shape({}).isRequired,
 };
 
 export default ReviewAvgs;

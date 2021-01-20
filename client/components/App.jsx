@@ -2,7 +2,6 @@
 import React from 'react';
 import ReviewAvgs from './ReviewAvgs.jsx';
 import LatestReviews from './LatestReviews.jsx';
-import styles from '../styles/app.module.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -10,6 +9,7 @@ class App extends React.Component {
     this.state = {
       reviews: {},
       averages: {},
+      tags: [],
     };
   }
 
@@ -23,6 +23,7 @@ class App extends React.Component {
         this.setState({
           reviews: data,
           averages: avg,
+          tags: data.reviews[0].tags,
         });
       })
       .catch((err) => console.error(err));
@@ -72,11 +73,13 @@ class App extends React.Component {
   }
 
   render() {
-    const { averages } = this.state;
+    const { reviews, averages, tags } = this.state;
     return (
       <div>
-        <ReviewAvgs averages={averages} />
-        <LatestReviews />
+        <hr />
+        <ReviewAvgs averages={averages} tags={tags} />
+        <LatestReviews reviews={reviews} />
+        <hr />
       </div>
     );
   }
