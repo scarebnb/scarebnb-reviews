@@ -1,5 +1,6 @@
 import React from 'react';
 import moment from 'moment';
+import styles from '../styles/app.module.css';
 
 const LatestReviews = ({ reviews }) => {
   const top6 = (revs) => {
@@ -12,30 +13,26 @@ const LatestReviews = ({ reviews }) => {
     }
     return [];
   };
-  let totalReviews = 0;
-  if (JSON.stringify(reviews) !== '{}') {
-    totalReviews = reviews.reviews.length;
-  }
+
   const latest6 = top6(reviews);
   return (
-    <div>
-      {latest6.map((review) => (
-        <div>
-          <span>
-            {review.reviewer_name}
-            {' '}
-            {moment(review.date).format('MMMM Do YYYY')}
-          </span>
-          <p>{review.review}</p>
+    <div className={styles.nestedLatest}>
+      {latest6.map((review, i) => (
+        <div className={styles.latestWrapper} key={i}>
+          <div className={styles.avatar}>
+            <img src={review.avatar} alt="profile pic" />
+          </div>
+          <div className={styles.nameAndDate}>
+            <div>
+              {review.reviewer_name}
+            </div>
+            <div>
+              {moment(review.date).format('MMMM Do YYYY')}
+            </div>
+          </div>
+          <p className={styles.review}>{review.review}</p>
         </div>
       ))}
-      <button type="button">
-        Show all
-        {' '}
-        {totalReviews}
-        {' '}
-        reviews
-      </button>
     </div>
   );
 };

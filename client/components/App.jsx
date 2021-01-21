@@ -2,6 +2,8 @@
 import React from 'react';
 import ReviewAvgs from './ReviewAvgs.jsx';
 import LatestReviews from './LatestReviews.jsx';
+import AllReviews from './AllReviews.jsx';
+import styles from '../styles/app.module.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -10,6 +12,7 @@ class App extends React.Component {
       reviews: {},
       averages: {},
       tags: [],
+      showAllReviews: false,
     };
   }
 
@@ -25,8 +28,8 @@ class App extends React.Component {
           averages: avg,
           tags: data.reviews[0].tags,
         });
-      })
-      .catch((err) => console.error(err));
+      });
+    // make catch that sends message to user
   }
 
   // eslint-disable-next-line class-methods-use-this
@@ -72,13 +75,36 @@ class App extends React.Component {
     return value;
   }
 
+  showAll() {
+    this.setState((state) => ({ showAllReviews: !state.showAllReviews }));
+  }
+
   render() {
-    const { reviews, averages, tags } = this.state;
+    const {
+      reviews, averages, tags, showAllReviews,
+    } = this.state;
     return (
       <div>
         <hr />
-        <ReviewAvgs averages={averages} tags={tags} />
-        <LatestReviews reviews={reviews} />
+        <div className={styles.padding}>
+          {/* Main Section  */}
+          <div className={styles.wrapper}>
+            <ReviewAvgs averages={averages} tags={tags} />
+            <div className={styles.wrapperWidth}>
+              <LatestReviews reviews={reviews} />
+              <button type="button" onClick={this.showAll.bind(this)}>
+                Show all
+                {' '}
+                {averages.totalReviews}
+                {' '}
+                reviews
+              </button>
+            </div>
+          </div>
+          {/* All Reviews Pop Up Modal */}
+          {showAllReviews
+            ? <AllReviews reviews={reviews} averages={averages} tags={tags} /> : null}
+        </div>
         <hr />
       </div>
     );

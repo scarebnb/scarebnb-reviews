@@ -1,9 +1,8 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import styles from '../styles/reviewAvg.module.css';
 
 const Tags = ({ tag }) => (
-  <div className={styles.column}>
+  <div>
     {tag}
   </div>
 );

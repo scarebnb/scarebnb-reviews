@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 import React from 'react';
 import propTypes from 'prop-types';
 import styles from '../styles/reviewAvg.module.css';
@@ -15,74 +16,56 @@ const ReviewAvgs = ({ averages, tags }) => {
     value,
   } = averages;
   return (
-    <div className={styles.spacing}>
-      <div className={styles.header}>
-        <span className={styles.star}>☆</span>
-        {' '}
-        {overall}
-        {' '}
-        (
-        {`${totalReviews} Reviews`}
-        )
-      </div>
-      <div className={styles.row}>
-        <div className={styles.column}>
-          <div className={styles.row}>
-            <div className={styles.column}>
-              cleanliness
-            </div>
-            <div className={styles.column}>
-              {cleanliness}
-            </div>
-          </div>
-          <div className={styles.row}>
-            <div className={styles.column}>
-              accuracy
-            </div>
-            <div className={styles.column}>
-              {accuracy}
-            </div>
-          </div>
-          <div className={styles.row}>
-            <div className={styles.column}>
-              communication
-            </div>
-            <div className={styles.column}>
-              {comm}
-            </div>
+    <div className={styles.avgs}>
+      <div className={styles.nestedAvgs}>
+        <div className={styles.fullWidth}>
+          <h2>
+            <span>☆</span>
+            {' '}
+            {overall}
+            {' '}
+            (
+            {`${totalReviews} Reviews`}
+            )
+          </h2>
+        </div>
+        <div>
+          cleanliness
+          {' '}
+          {cleanliness}
+        </div>
+        <div>
+          accuracy
+          {' '}
+          {accuracy}
+        </div>
+        <div>
+          communication
+          {' '}
+          {comm}
+        </div>
+        <div>
+          location
+          {' '}
+          {location}
+        </div>
+        <div>
+          Check-in
+          {' '}
+          {checkIn}
+        </div>
+        <div>
+          value
+          {' '}
+          {value}
+        </div>
+        <div className={styles.fullWidth}>
+          <div className={styles.nestedTags}>
+            {tags.map((tag, i) => (
+              <Tags tag={tag} key={i} />
+            ))}
           </div>
         </div>
-        <div className={styles.column}>
-          <div className={styles.row}>
-            <div className={styles.column}>
-              location
-            </div>
-            <div className={styles.column}>
-              {location}
-            </div>
-          </div>
-          <div className={styles.row}>
-            <div className={styles.column}>
-              Check-in
-            </div>
-            <div className={styles.column}>
-              {checkIn}
-            </div>
-          </div>
-          <div className={styles.row}>
-            <div className={styles.column}>
-              value
-            </div>
-            <div className={styles.column}>
-              {value}
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className={`${styles.row} ${styles.spacing}`}>
-        {tags.map((tag, i) => (
-          <Tags tag={tag} key={i} />
-        ))}
       </div>
     </div>
   );

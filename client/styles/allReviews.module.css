@@ -1,0 +1,42 @@
+/* All reviews pop up modal */
+.wrapper {
+  display: grid;
+  grid-template-columns: 37% auto;
+  grid-template-rows: minmax(100px, 5% auto);
+  padding: 40px 40px 40px 40px;
+}
+.wrapper > div {
+  background: #eee;
+  padding: 1em;
+}
+.wrapper > div:nth-child(odd){
+  background: #ddd;
+}
+.nestedReviews{
+  display: grid;
+}
+.nestedReviews > div {
+  border: #333 1px solid;
+  padding: 1em;
+}
+.reviewsWrapper {
+  display: grid;
+  grid-auto-rows: minmax(15%, auto);
+  grid-template-columns: 15% auto;
+}
+.avatar {
+  grid-column: 1 / 2;
+  align-self: center;
+}
+.nameAndDate {
+  grid-column: 2 / 3;
+}
+.review {
+  grid-column: 1 /3;
+  grid-row: 2 / 3;
+}
+img {
+  height: 25%;
+  width: 25%;
+  min-height: 1px;
+}
