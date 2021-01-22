@@ -4,8 +4,11 @@ import moment from 'moment';
 import styles from '../styles/allReviews.module.css';
 import MiniReviewAvgs from './MiniReviewAvgs.jsx';
 
-const AllReviews = ({ reviews, averages, tags }) => (
+const AllReviews = ({ reviews, averages, tags, showAll}) => (
   <div className={styles.wrapper}>
+    <div className={styles.heading}>
+      <button type="button" onClick={() => showAll()}>x</button>
+    </div>
     <MiniReviewAvgs averages={averages} tags={tags} />
     <div className={styles.reviews}>
       <div className={styles.nestedReviews}>

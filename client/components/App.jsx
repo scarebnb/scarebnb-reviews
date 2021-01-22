@@ -14,6 +14,7 @@ class App extends React.Component {
       tags: [],
       showAllReviews: false,
     };
+    this.showAll = this.showAll.bind(this);
   }
 
   componentDidMount() {
@@ -84,15 +85,15 @@ class App extends React.Component {
       reviews, averages, tags, showAllReviews,
     } = this.state;
     return (
-      <div>
+      <div className={styles.paddingHorizontal}>
         <hr />
-        <div className={styles.padding}>
+        <div className={styles.paddingVertical}>
           {/* Main Section  */}
           <div className={styles.wrapper}>
             <ReviewAvgs averages={averages} tags={tags} />
             <div className={styles.wrapperWidth}>
               <LatestReviews reviews={reviews} />
-              <button type="button" onClick={this.showAll.bind(this)}>
+              <button type="button" onClick={this.showAll}>
                 Show all
                 {' '}
                 {averages.totalReviews}
@@ -103,7 +104,14 @@ class App extends React.Component {
           </div>
           {/* All Reviews Pop Up Modal */}
           {showAllReviews
-            ? <AllReviews reviews={reviews} averages={averages} tags={tags} /> : null}
+            ? (
+              <AllReviews
+                reviews={reviews}
+                averages={averages}
+                tags={tags}
+                showAll={this.showAll}
+              />
+            ) : null}
         </div>
         <hr />
       </div>

@@ -15,6 +15,19 @@ const ReviewAvgs = ({ averages, tags }) => {
     checkIn,
     value,
   } = averages;
+
+  const percent = (val) => ((val / 5) * 100).toString();
+  // db values ignore .0 in value and throw off balance of the force
+  // function add .0 to those values
+  const makeDec = (val) => {
+    if (JSON.stringify(averages) !== '{}') {
+      if (val.toString().indexOf('.') !== -1) {
+        return val;
+      }
+      return `${val.toString()}.0`;
+    }
+    return null;
+  };
   return (
     <div className={styles.avgs}>
       <div className={styles.nestedAvgs}>
@@ -22,7 +35,7 @@ const ReviewAvgs = ({ averages, tags }) => {
           <h2>
             <span>☆</span>
             {' '}
-            {overall}
+            {makeDec(overall)}
             {' '}
             (
             {`${totalReviews} Reviews`}
@@ -31,33 +44,51 @@ const ReviewAvgs = ({ averages, tags }) => {
         </div>
         <div>
           cleanliness
-          {' '}
-          {cleanliness}
+          <div className={styles.right}>
+            <progress max="100" value={percent(cleanliness)} />
+            {' '}
+            {makeDec(cleanliness)}
+          </div>
         </div>
         <div>
           accuracy
-          {' '}
-          {accuracy}
+          <div className={styles.right}>
+            <progress max="100" value={percent(cleanliness)} />
+            {' '}
+            {makeDec(accuracy)}
+          </div>
         </div>
         <div>
           communication
-          {' '}
-          {comm}
+          <div className={styles.right}>
+            <progress max="100" value={percent(cleanliness)} />
+            {' '}
+            {makeDec(comm)}
+          </div>
         </div>
         <div>
           location
-          {' '}
-          {location}
+          <div className={styles.right}>
+            <progress max="100" value={percent(cleanliness)} />
+            {' '}
+            {makeDec(location)}
+          </div>
         </div>
         <div>
-          Check-in
-          {' '}
-          {checkIn}
+          check-in
+          <div className={styles.right}>
+            <progress max="100" value={percent(cleanliness)} />
+            {' '}
+            {makeDec(checkIn)}
+          </div>
         </div>
         <div>
           value
-          {' '}
-          {value}
+          <div className={styles.right}>
+            <progress max="100" value={percent(cleanliness)} />
+            {' '}
+            {makeDec(value)}
+          </div>
         </div>
         <div className={styles.fullWidth}>
           <div className={styles.nestedTags}>

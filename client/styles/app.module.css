@@ -2,9 +2,13 @@
 * {
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
 }
-.padding {
+.paddingVertical {
   padding-top: 48px;
   padding-bottom: 48px;
+}
+.paddingHorizontal {
+  padding-right: 48px;
+  padding-left: 48px;
 }
 /* entire section wrapper */
 .wrapper {
@@ -12,21 +16,9 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: minmax(100px, 25% auto);
 }
-.wrapper > div {
-  background: #eee;
-  padding-left: 40px;
-  padding-right: 40px
-}
-.wrapper > div:nth-child(odd){
-  background: #ddd;
-}
 /* latest reviews */
 .wrapperWidth {
   grid-column: 1 / 3;
-}
-.nestedLatest > div {
-  border: #333 1px solid;
-  padding: 1em;
 }
 .nestedLatest {
   display: grid;

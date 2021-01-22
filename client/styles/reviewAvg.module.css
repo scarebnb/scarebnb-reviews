@@ -4,7 +4,6 @@
   grid-template-columns: 1fr 1fr;
 }
 .nestedAvgs > div {
-  border: #333 1px solid;
   padding: 1em;
 }
 .avgs {
@@ -17,5 +16,8 @@
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-gap: 1em;
+}
+.right{
+  float: right;
 }
 
