@@ -33,7 +33,7 @@ const ReviewAvgs = ({ averages, tags }) => {
       <div className={styles.nestedAvgs}>
         <div className={styles.fullWidth}>
           <h2>
-            <span>☆</span>
+            <span className={styles.star}>&#x2605;</span>
             {' '}
             {makeDec(overall)}
             {' '}
@@ -42,7 +42,7 @@ const ReviewAvgs = ({ averages, tags }) => {
             )
           </h2>
         </div>
-        <div>
+        <div className={styles.rating}>
           cleanliness
           <div className={styles.right}>
             <progress max="100" value={percent(cleanliness)} />
@@ -50,7 +50,7 @@ const ReviewAvgs = ({ averages, tags }) => {
             {makeDec(cleanliness)}
           </div>
         </div>
-        <div>
+        <div className={styles.rating}>
           accuracy
           <div className={styles.right}>
             <progress max="100" value={percent(accuracy)} />
@@ -58,7 +58,7 @@ const ReviewAvgs = ({ averages, tags }) => {
             {makeDec(accuracy)}
           </div>
         </div>
-        <div>
+        <div className={styles.rating}>
           communication
           <div className={styles.right}>
             <progress max="100" value={percent(comm)} />
@@ -66,7 +66,7 @@ const ReviewAvgs = ({ averages, tags }) => {
             {makeDec(comm)}
           </div>
         </div>
-        <div>
+        <div className={styles.rating}>
           location
           <div className={styles.right}>
             <progress max="100" value={percent(location)} />
@@ -74,7 +74,7 @@ const ReviewAvgs = ({ averages, tags }) => {
             {makeDec(location)}
           </div>
         </div>
-        <div>
+        <div className={styles.rating}>
           check-in
           <div className={styles.right}>
             <progress max="100" value={percent(checkIn)} />
@@ -82,7 +82,7 @@ const ReviewAvgs = ({ averages, tags }) => {
             {makeDec(checkIn)}
           </div>
         </div>
-        <div>
+        <div className={styles.rating}>
           value
           <div className={styles.right}>
             <progress max="100" value={percent(value)} />

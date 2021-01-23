@@ -1,26 +1,28 @@
 /* for for entire page */
 * {
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+  font-weight: 400;
 }
 button {
   background-color: Transparent;
   border-radius: 25px;
   padding: 8px 16px 8px 16px;
   outline:none;
-  border-color: #aaa;
+  border-color: #B0B0B0;
   border-style: solid;
   box-shadow: none;
 }
 button:focus,
 button:hover {
-  border-color: #000;
+  border-color: #222232;
+  cursor: pointer;
 }
 /* entire section wrapper */
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: minmax(100px, 25% auto);
-  padding: 48px 80px 48px 80px;
+  grid-template-rows: minmax(120px, 25% auto);
+  padding: 48px 120px 48px 120px;
 }
 /* latest reviews */
 .reviews {

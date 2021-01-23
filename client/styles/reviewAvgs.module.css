@@ -15,15 +15,45 @@
 }
 .nestedTags {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(8, minmax(180px, auto));
   grid-gap: 1em;
+}
+.tag {
+  font-size: 12px !important;
+  line-height: 16px;
+  color: #222222;
+}
+.rating {
+  margin-right: 96px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+}
+/* ratings bars */
+progress {
+  border-radius: 50px;
+  width: 120px;
+  height: 3px;
+  margin-right: 20px;
+}
+progress::-webkit-progress-bar {
+  background-color: #DDDDDD;
+  border-radius: 7px;
+}
+progress::-webkit-progress-value {
+  background-color: #222323;
+  border-radius: 7px;
 }
 /* fonts */
 h2 {
-  font-weight: 600 !important;
+  font-size: 22px;
+  font-weight: 400;
+  margin-top: 0px;
 }
-
 .right{
   float: right;
+  font-size: 12px;
 }
-
+.star{
+ color:#FF385C;
+}

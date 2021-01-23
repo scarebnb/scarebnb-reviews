@@ -1,8 +1,9 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import styles from '../styles/reviewAvgs.module.css';
 
 const Tags = ({ tag }) => (
-  <button type="button">
+  <button type="button" className={styles.tag}>
     {tag}
   </button>
 );
