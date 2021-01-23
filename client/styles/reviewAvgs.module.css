@@ -27,7 +27,8 @@
   margin-right: 96px;
   font-size: 16px;
   line-height: 20px;
-  font-weight: 400;
+  font-weight: 300;
+  color:#222222;
 }
 /* ratings bars */
 progress {
@@ -47,7 +48,8 @@ progress::-webkit-progress-value {
 /* fonts */
 h2 {
   font-size: 22px;
-  font-weight: 400;
+  line-height: 26px;
+  font-weight: 600;
   margin-top: 0px;
 }
 .right{

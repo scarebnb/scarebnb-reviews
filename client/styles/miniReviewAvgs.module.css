@@ -1,3 +1,4 @@
+/* Ratings Avg Section */
 .avgs {
   grid-column: 1 / 2;
 }
@@ -9,21 +10,22 @@
 .avgsWrapper > div {
   padding: 1em;
 }
-.fullWidth {
+.rating {
   grid-column: 1 / 3;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 300;
+  color:#222222;
 }
+/* tags */
 .tagsSection {
   grid-column: 1 / 3;
 }
 .tagsWrapper {
   display: grid;
-  grid-template-columns: minmax(20px, auto) 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 1em;
   padding-top: 24px;
-}
-.tagsWrapper > div {
-  border: #333 1px solid;
-  padding: 1em;
 }
 .right{
   float: right;

@@ -30,48 +30,48 @@ const ReviewAvgs = ({ averages, tags }) => {
   return (
     <div className={styles.avgs}>
       <div className={styles.avgsWrapper}>
-        <div className={styles.fullWidth}>
-          cleanliness
+        <div className={styles.rating}>
+          Cleanliness
           <div className={styles.right}>
             <progress max="100" value={percent(cleanliness)} />
             {' '}
             {makeDec(cleanliness)}
           </div>
         </div>
-        <div className={styles.fullWidth}>
-          accuracy
+        <div className={styles.rating}>
+          Accuracy
           <div className={styles.right}>
             <progress max="100" value={percent(accuracy)} />
             {' '}
             {makeDec(accuracy)}
           </div>
         </div>
-        <div className={styles.fullWidth}>
-          communication
+        <div className={styles.rating}>
+          Communication
           <div className={styles.right}>
             <progress max="100" value={percent(comm)} />
             {' '}
             {makeDec(comm)}
           </div>
         </div>
-        <div className={styles.fullWidth}>
-          location
+        <div className={styles.rating}>
+          Location
           <div className={styles.right}>
             <progress max="100" value={percent(location)} />
             {' '}
             {makeDec(location)}
           </div>
         </div>
-        <div className={styles.fullWidth}>
-          check-in
+        <div className={styles.rating}>
+          Check-in
           <div className={styles.right}>
             <progress max="100" value={percent(checkIn)} />
             {' '}
             {makeDec(checkIn)}
           </div>
         </div>
-        <div className={styles.fullWidth}>
-          value
+        <div className={styles.rating}>
+          Value
           <div className={styles.right}>
             <progress max="100" value={percent(value)} />
             {' '}

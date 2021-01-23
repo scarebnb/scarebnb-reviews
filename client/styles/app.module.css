@@ -10,11 +10,12 @@ button {
   outline:none;
   border-color: #B0B0B0;
   border-style: solid;
+  border-width: thin;
   box-shadow: none;
 }
 button:focus,
 button:hover {
-  border-color: #222232;
+  border-color: #222222;
   cursor: pointer;
 }
 /* entire section wrapper */
@@ -30,5 +31,15 @@ button:hover {
 }
 /* showAll button */
 #showAll {
-
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  border-radius: 10px;
+  border-color: #222222;
+  padding: 13px 23px 13px 23px;
+}
+#showAll:focus,
+#showAll:hover {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.036); /* Black w/ opacity */
 }

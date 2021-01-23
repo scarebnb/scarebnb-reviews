@@ -23,10 +23,10 @@ const LatestReviews = ({ reviews }) => {
             <img src={review.avatar} alt="profile pic" />
           </div>
           <div className={styles.info}>
-            <div>
+            <div className={styles.name}>
               {review.reviewer_name}
             </div>
-            <div>
+            <div className={styles.date}>
               {moment(review.date).format('MMMM Do YYYY')}
             </div>
           </div>

@@ -43,7 +43,7 @@ const ReviewAvgs = ({ averages, tags }) => {
           </h2>
         </div>
         <div className={styles.rating}>
-          cleanliness
+          Cleanliness
           <div className={styles.right}>
             <progress max="100" value={percent(cleanliness)} />
             {' '}
@@ -51,7 +51,7 @@ const ReviewAvgs = ({ averages, tags }) => {
           </div>
         </div>
         <div className={styles.rating}>
-          accuracy
+          Accuracy
           <div className={styles.right}>
             <progress max="100" value={percent(accuracy)} />
             {' '}
@@ -59,7 +59,7 @@ const ReviewAvgs = ({ averages, tags }) => {
           </div>
         </div>
         <div className={styles.rating}>
-          communication
+          Communication
           <div className={styles.right}>
             <progress max="100" value={percent(comm)} />
             {' '}
@@ -67,7 +67,7 @@ const ReviewAvgs = ({ averages, tags }) => {
           </div>
         </div>
         <div className={styles.rating}>
-          location
+          Location
           <div className={styles.right}>
             <progress max="100" value={percent(location)} />
             {' '}
@@ -75,7 +75,7 @@ const ReviewAvgs = ({ averages, tags }) => {
           </div>
         </div>
         <div className={styles.rating}>
-          check-in
+          Check-in
           <div className={styles.right}>
             <progress max="100" value={percent(checkIn)} />
             {' '}
@@ -83,7 +83,7 @@ const ReviewAvgs = ({ averages, tags }) => {
           </div>
         </div>
         <div className={styles.rating}>
-          value
+          Value
           <div className={styles.right}>
             <progress max="100" value={percent(value)} />
             {' '}

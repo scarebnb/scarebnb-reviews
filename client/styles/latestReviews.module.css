@@ -1,3 +1,4 @@
+/* review nested container */
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -7,6 +8,7 @@
   grid-auto-columns: repeat(5, minmax(56px, auto));
   grid-auto-rows: repeat(2, auto);
 }
+/* review data */
 .avatar {
   grid-column: 1 / 2;
   align-self: center;
@@ -14,9 +16,25 @@
 .info {
   grid-column: 2 / 6;
 }
+.name {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+  color: #222222;
+}
+.date {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #717171;
+}
 .review {
   grid-column: 1 / 6;
   grid-row: 2 / 3;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #222222;
 }
 img {
   max-height: 56px;

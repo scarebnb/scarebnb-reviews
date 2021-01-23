@@ -10,11 +10,11 @@ const AllReviews = ({ reviews }) => (
           <div className={styles.avatar}>
             <img src={review.avatar} alt="profile pic" />
           </div>
-          <div className={styles.nameAndDate}>
-            <div>
+          <div className={styles.info}>
+            <div className={styles.name}>
               {review.reviewer_name}
             </div>
-            <div>
+            <div className={styles.date}>
               {moment(review.date).format('MMMM Do YYYY')}
             </div>
           </div>
