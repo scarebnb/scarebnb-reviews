@@ -1,6 +1,6 @@
 import React from 'react';
 import moment from 'moment';
-import styles from '../styles/app.module.css';
+import styles from '../styles/latestReviews.module.css';
 
 const LatestReviews = ({ reviews }) => {
   const top6 = (revs) => {
@@ -16,13 +16,13 @@ const LatestReviews = ({ reviews }) => {
 
   const latest6 = top6(reviews);
   return (
-    <div className={styles.nestedLatest}>
+    <div className={styles.wrapper}>
       {latest6.map((review, i) => (
-        <div className={styles.latestWrapper} key={i}>
+        <div className={styles.reviewWrapper} key={i}>
           <div className={styles.avatar}>
             <img src={review.avatar} alt="profile pic" />
           </div>
-          <div className={styles.nameAndDate}>
+          <div className={styles.info}>
             <div>
               {review.reviewer_name}
             </div>

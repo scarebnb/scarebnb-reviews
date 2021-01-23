@@ -2,9 +2,9 @@ import React from 'react';
 import propTypes from 'prop-types';
 
 const Tags = ({ tag }) => (
-  <div>
+  <button type="button">
     {tag}
-  </div>
+  </button>
 );
 
 export default Tags;

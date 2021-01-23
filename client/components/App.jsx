@@ -2,7 +2,7 @@
 import React from 'react';
 import ReviewAvgs from './ReviewAvgs.jsx';
 import LatestReviews from './LatestReviews.jsx';
-import AllReviews from './AllReviews.jsx';
+import ReviewsModal from './ReviewsModal.jsx';
 import styles from '../styles/app.module.css';
 
 class App extends React.Component {
@@ -85,34 +85,32 @@ class App extends React.Component {
       reviews, averages, tags, showAllReviews,
     } = this.state;
     return (
-      <div className={styles.paddingHorizontal}>
+      <div>
         <hr />
-        <div className={styles.paddingVertical}>
-          {/* Main Section  */}
-          <div className={styles.wrapper}>
-            <ReviewAvgs averages={averages} tags={tags} />
-            <div className={styles.wrapperWidth}>
-              <LatestReviews reviews={reviews} />
-              <button type="button" onClick={this.showAll}>
-                Show all
-                {' '}
-                {averages.totalReviews}
-                {' '}
-                reviews
-              </button>
-            </div>
+        {/* Main Section  */}
+        <div className={styles.wrapper}>
+          <ReviewAvgs averages={averages} tags={tags} />
+          <div className={styles.reviews}>
+            <LatestReviews reviews={reviews} />
+            <button type="button" onClick={this.showAll} id={styles.showAll}>
+              Show all
+              {' '}
+              {averages.totalReviews}
+              {' '}
+              reviews
+            </button>
           </div>
-          {/* All Reviews Pop Up Modal */}
-          {showAllReviews
-            ? (
-              <AllReviews
-                reviews={reviews}
-                averages={averages}
-                tags={tags}
-                showAll={this.showAll}
-              />
-            ) : null}
         </div>
+        {/* All Reviews Pop Up Modal */}
+        {showAllReviews
+          ? (
+            <ReviewsModal
+              reviews={reviews}
+              averages={averages}
+              tags={tags}
+              showAll={this.showAll}
+            />
+          ) : null}
         <hr />
       </div>
     );

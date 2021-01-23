@@ -1,47 +1,32 @@
-/* font for entire page */
+/* for for entire page */
 * {
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
 }
-.paddingVertical {
-  padding-top: 48px;
-  padding-bottom: 48px;
+button {
+  background-color: Transparent;
+  border-radius: 25px;
+  padding: 8px 16px 8px 16px;
+  outline:none;
+  border-color: #aaa;
+  border-style: solid;
+  box-shadow: none;
 }
-.paddingHorizontal {
-  padding-right: 48px;
-  padding-left: 48px;
+button:focus,
+button:hover {
+  border-color: #000;
 }
 /* entire section wrapper */
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: minmax(100px, 25% auto);
+  padding: 48px 80px 48px 80px;
 }
 /* latest reviews */
-.wrapperWidth {
+.reviews {
   grid-column: 1 / 3;
 }
-.nestedLatest {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-.latestWrapper {
-  display: grid;
-  grid-auto-rows: minmax(15%, auto);
-  grid-template-columns: 15% auto;
-}
-.avatar {
-  grid-column: 1 / 2;
-  align-self: center;
-}
-.nameAndDate {
-  grid-column: 2 / 3;
-}
-.review {
-  grid-column: 1 /3;
-  grid-row: 2 / 3;
-}
-img {
-  height: 25%;
-  width: 25%;
-  min-height: 1px;
+/* showAll button */
+#showAll {
+
 }

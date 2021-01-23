@@ -1,7 +1,7 @@
 /* eslint-disable import/extensions */
 import React from 'react';
 import propTypes from 'prop-types';
-import styles from '../styles/reviewAvg.module.css';
+import styles from '../styles/reviewAvgs.module.css';
 import Tags from './Tags.jsx';
 
 const ReviewAvgs = ({ averages, tags }) => {
@@ -53,7 +53,7 @@ const ReviewAvgs = ({ averages, tags }) => {
         <div>
           accuracy
           <div className={styles.right}>
-            <progress max="100" value={percent(cleanliness)} />
+            <progress max="100" value={percent(accuracy)} />
             {' '}
             {makeDec(accuracy)}
           </div>
@@ -61,7 +61,7 @@ const ReviewAvgs = ({ averages, tags }) => {
         <div>
           communication
           <div className={styles.right}>
-            <progress max="100" value={percent(cleanliness)} />
+            <progress max="100" value={percent(comm)} />
             {' '}
             {makeDec(comm)}
           </div>
@@ -69,7 +69,7 @@ const ReviewAvgs = ({ averages, tags }) => {
         <div>
           location
           <div className={styles.right}>
-            <progress max="100" value={percent(cleanliness)} />
+            <progress max="100" value={percent(location)} />
             {' '}
             {makeDec(location)}
           </div>
@@ -77,7 +77,7 @@ const ReviewAvgs = ({ averages, tags }) => {
         <div>
           check-in
           <div className={styles.right}>
-            <progress max="100" value={percent(cleanliness)} />
+            <progress max="100" value={percent(checkIn)} />
             {' '}
             {makeDec(checkIn)}
           </div>
@@ -85,7 +85,7 @@ const ReviewAvgs = ({ averages, tags }) => {
         <div>
           value
           <div className={styles.right}>
-            <progress max="100" value={percent(cleanliness)} />
+            <progress max="100" value={percent(value)} />
             {' '}
             {makeDec(value)}
           </div>

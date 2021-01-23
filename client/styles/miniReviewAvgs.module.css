@@ -1,19 +1,30 @@
-.miniReviewsAvgs {
+.avgs {
   grid-column: 1 / 2;
 }
-.reviews {
-  grid-column: 2 /3;
+.avgsWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
 }
-.wrapperWidth {
+.avgsWrapper > div {
+  padding: 1em;
+}
+.fullWidth {
   grid-column: 1 / 3;
+}
+.tagsSection {
+  grid-column: 1 / 3;
+}
+.tagsWrapper {
+  display: grid;
+  grid-template-columns: minmax(20px, auto) 1fr 1fr;
+  grid-gap: 1em;
   padding-top: 24px;
 }
-.nestedTags {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-gap: 1em;
-}
-.nestedTags > div {
+.tagsWrapper > div {
   border: #333 1px solid;
   padding: 1em;
+}
+.right{
+  float: right;
 }

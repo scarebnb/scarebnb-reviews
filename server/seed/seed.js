@@ -28,8 +28,8 @@ const addReviews = (listingId) => {
   // [name, avatar, date, review, cleanliness, accuracy, comm,
   // location, check_in, value, location_id]
   const reviews = [faker.name.findName(), generator.generateRandomAvatar(),
-    faker.date.recent(), faker.lorem.paragraph(), getRand(1, 5), getRand(1, 5),
-    getRand(1, 5), getRand(1, 5), getRand(1, 5), getRand(1, 5), listingId];
+    faker.date.recent(), faker.lorem.paragraph(), getRand(3, 5), getRand(1, 5),
+    getRand(1, 5), getRand(3, 5), getRand(3, 5), getRand(3, 5), listingId];
 
   const reviewsQuery = `INSERT INTO reviews (name, avatar, date, review,
     cleanliness, accuracy, comm, location, check_in, value, location_id)
@@ -52,15 +52,16 @@ const addTags = (reviewId) => {
 
 /* Seed Data for 100 listings */
 let reviewId = 0;
-for (let i = 1; i <= 100; i + 1) {
+for (let i = 1; i <= 100; i += 1) {
   addLocations();
 
   // for every listing seed random number of reviews
-  for (let r = 1; r <= getRand(6, 100); r + 1) {
+  for (let r = 1; r <= getRand(6, 100); r += 1) {
     addReviews(i);
+
     reviewId += 1;
     // for every review add random tags to post
-    for (let t = 1; t <= getRand(1, 10); t + 1) {
+    for (let t = 1; t <= getRand(1, 10); t += 1) {
       // reviewId connects the tags that specific review
       addTags(reviewId);
     }

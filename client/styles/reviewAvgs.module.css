@@ -1,4 +1,5 @@
 /* ReviewAvgs Component */
+/* Grid layouts */
 .nestedAvgs {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -17,6 +18,11 @@
   grid-template-columns: repeat(8, 1fr);
   grid-gap: 1em;
 }
+/* fonts */
+h2 {
+  font-weight: 600 !important;
+}
+
 .right{
   float: right;
 }
