@@ -12,7 +12,6 @@ const ReviewsModal = ({
       <div className={styles.wrapper}>
         <div className={styles.closeBtn}>
           <span
-            className={styles.close}
             onClick={() => showAll()}
             onKeyPress={showAll}
             role="button"
