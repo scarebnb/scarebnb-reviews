@@ -22,13 +22,16 @@ const ReviewsModal = ({
         </div>
         <div className={styles.heading}>
           <h2>
-            <span className={styles.star}>&#x2605;</span>
-            {' '}
-            {averages.overall}
-            {' '}
-            (
-            {`${averages.totalReviews} Reviews`}
-            )
+            <div className={styles.overall}>
+              <span className={styles.star}>&#x2605;</span>
+              {' '}
+              {averages.overall}
+              {' '}
+              (
+              {`${averages.totalReviews} reviews`}
+              )
+            </div>
+
           </h2>
         </div>
         <div className={styles.overview}>

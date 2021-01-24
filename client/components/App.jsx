@@ -85,7 +85,7 @@ class App extends React.Component {
       reviews, averages, tags, showAllReviews,
     } = this.state;
     return (
-      <div>
+      <div className={styles.reviewSection}>
         <hr />
         {/* Main Section  */}
         <div className={styles.wrapper}>

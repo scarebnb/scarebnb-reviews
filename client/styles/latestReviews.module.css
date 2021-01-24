@@ -6,12 +6,11 @@
 .reviewWrapper {
   display: grid;
   grid-auto-columns: repeat(5, minmax(56px, auto));
-  grid-auto-rows: repeat(2, auto);
+  grid-auto-rows: repeat(2, minmax(56px, auto));
 }
 /* review data */
 .avatar {
   grid-column: 1 / 2;
-  align-self: center;
 }
 .info {
   grid-column: 2 / 6;

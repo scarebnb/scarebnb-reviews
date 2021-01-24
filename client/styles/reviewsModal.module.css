@@ -59,16 +59,18 @@
   grid-column: 1 / 3;
   grid-row: 2 / 3;
 }
-.heading {
-  font-size: 32px;
-  line-height: 36px;
-  font-weight: 800;
-  color:#222222;
+.overall {
+  margin-top: 25px;
+  font-size: 32px !important;
+  line-height: 36px !important;
+  font-weight: 700 !important;
+  color:#222222 !important;
 }
 /* section for review overview nested grid */
 .overview {
   grid-column: 1 / 2;
   grid-row: 3 / 4;
+  padding-top: 24px;
 }
 /* section for all reviews  nested grid */
 .all_reviews{
