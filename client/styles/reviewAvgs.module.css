@@ -14,14 +14,13 @@
   grid-column: 1 / 3;
 }
 .nestedTags {
-  display: grid;
-  grid-template-columns: repeat(8, minmax(180px, auto));
-  grid-gap: 1em;
+  display: inline;
 }
 .tag {
   font-size: 12px !important;
   line-height: 16px;
   color: #222222;
+  margin: 5px
 }
 .rating {
   margin-right: 96px;

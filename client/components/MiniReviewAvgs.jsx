@@ -80,7 +80,7 @@ const ReviewAvgs = ({ averages, tags }) => {
         </div>
         <div className={styles.tagsSection}>
           <hr />
-          <div className={styles.tagsWrapper}>
+          <div className={styles.tags}>
             {tags.map((tag, i) => (
               <Tags tag={tag} key={i} />
             ))}
