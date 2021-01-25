@@ -1,8 +1,8 @@
-DROP DATABASE `airbnb`;
+DROP DATABASE `reviews`;
 
-CREATE DATABASE IF NOT EXISTS `airbnb`;
+CREATE DATABASE IF NOT EXISTS `reviews`;
 
-USE `airbnb`;
+USE `reviews`;
 
 -- ---
 -- Table 'locations'

@@ -7,11 +7,12 @@
 **Server Set Up**
 
 `cd server`
+
 `npm install`
 
 Initialinze database
 
-`mysql -u root < server/schema.sql`
+`npm run config`
 
 Seed database with fake data
 
