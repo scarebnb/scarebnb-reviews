@@ -3,15 +3,18 @@
 .nestedAvgs {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto repeat(3, 36px);
 }
-.nestedAvgs > div {
+/* .nestedAvgs > div {
   padding: 1em;
-}
+} */
 .avgs {
   grid-column: 1 / 3;
 }
 .fullWidth {
   grid-column: 1 / 3;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .nestedTags {
   display: inline;
