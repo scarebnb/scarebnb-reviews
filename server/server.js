@@ -6,7 +6,7 @@ const controllers = require('./controllers');
 
 const app = express();
 
-app.get('/reviews/:id', controllers.reviews.get);
+app.get('http://localhost:3000/reviews/:id', controllers.reviews.get);
 
 app.use(cors({
   origin: 'http://localhost:8000',
