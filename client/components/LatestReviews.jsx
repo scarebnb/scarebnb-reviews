@@ -27,7 +27,7 @@ const LatestReviews = ({ reviews }) => {
               {review.reviewer_name}
             </div>
             <div className={styles.date}>
-              {moment(review.date).format('MMMM Do YYYY')}
+              {moment(review.date).format('MMMM YYYY')}
             </div>
           </div>
           <p className={styles.review}>{review.review}</p>
