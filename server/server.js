@@ -12,8 +12,8 @@ app.use(cors({
   origin: 'http://localhost:8000',
 }));
 
-// app.use('/bundle', express.static(path.join(__dirname, '/../client/public/bundle.js')));
-app.use(express.static(path.join(__dirname, '/../client/public')));
+app.use('/bundle', express.static(path.join(__dirname, '/../client/public/bundle.js')));
+app.use('/', express.static(path.join(__dirname, '/../client/public')));
 
 const PORT = process.env.PORT || 3002;
 
