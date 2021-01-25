@@ -4,13 +4,23 @@
 
 ### **Getting Started**
 
-**Server Set Up**
+Install necessary node packages
 
 `cd server`
 
 `npm install`
 
-Initialinze database
+`cd ../client`
+
+`npm install`
+
+**Server Set Up**
+
+Initialinize database
+
+cd over to root of repo:
+
+`cd ..`
 
 `npm run config`
 
