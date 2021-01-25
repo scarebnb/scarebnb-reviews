@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "server": "nodemon server.js",
+    "server" : "node server.js",
+    "dev server": "nodemon server.js",
     "config": "mysql -u root < schema.sql",
     "seed": "node seed/seed.js",
     "test": "jest --runInBand"
