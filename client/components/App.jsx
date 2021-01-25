@@ -20,7 +20,7 @@ class App extends React.Component {
   componentDidMount() {
     const getRand = (min, max) => Math.floor(Math.random() * (max - min) + min);
 
-    fetch(`reviews/${getRand(1, 100)}`)
+    fetch(`http://localhost:3002/reviews/${getRand(1, 100)}`)
       .then((res) => res.json())
       .then((data) => {
         const sortedData = data.reviews.sort((a, b) => new Date(b.date) - new Date(a.date));
