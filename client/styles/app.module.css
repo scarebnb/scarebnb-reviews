@@ -23,6 +23,18 @@ button:hover {
   border-color: #222222;
   cursor: pointer;
 }
+button:active {
+  animation: press 0.2s;
+  transform: scale(0.95);
+}
+@keyframes press {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.95);
+  }
+}
 /* Padding for parent div on whole page */
 .reviewSection {
   padding: 48px 120px 48px 120px;

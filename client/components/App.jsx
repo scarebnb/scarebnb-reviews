@@ -31,7 +31,6 @@ class App extends React.Component {
           tags: data.reviews[0].tags,
         });
       });
-    // make catch that sends message to user
   }
 
   // eslint-disable-next-line class-methods-use-this
