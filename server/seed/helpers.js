@@ -1,17 +1,14 @@
-const getRand = (min, max) =>  {
-  return Math.floor(
-      Math.random() * (max - min) + min);
-}
+const getRand = (min, max) => Math.floor(Math.random() * (max - min) + min);
 
 const tagGenerator = () => {
-  tagSelection = ['Reponsive host', 'Romfortable bends', 'Easy check-in',
+  const tagSelection = ['Responsive host', 'Comfortable beds', 'Easy check-in',
     'Great location', 'Great restaurants', 'Great views', 'Helpful host',
-    'Thoughful touches', 'Friendly host', 'A guiet neighborhood'];
+    'Thoughtful touches', 'Friendly host', 'A quiet neighborhood'];
 
-    return tagSelection[getRand(1, tagSelection.length)];
-}
+  return tagSelection[getRand(1, tagSelection.length)];
+};
 
 module.exports = {
   getRand,
-  tagGenerator
-}
+  tagGenerator,
+};

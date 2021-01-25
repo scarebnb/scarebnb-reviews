@@ -1,0 +1,63 @@
+/* ReviewAvgs Component */
+/* Grid layouts */
+.nestedAvgs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto repeat(3, 36px);
+}
+/* .nestedAvgs > div {
+  padding: 1em;
+} */
+.avgs {
+  grid-column: 1 / 3;
+}
+.fullWidth {
+  grid-column: 1 / 3;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.nestedTags {
+  display: inline;
+}
+.tag {
+  font-size: 12px !important;
+  line-height: 16px;
+  color: #222222;
+  margin: 5px
+}
+.rating {
+  margin-right: 96px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 300;
+  color:#222222;
+}
+/* ratings bars */
+progress {
+  border-radius: 50px;
+  width: 120px;
+  height: 3px;
+  margin-right: 20px;
+}
+progress::-webkit-progress-bar {
+  background-color: #DDDDDD;
+  border-radius: 7px;
+}
+progress::-webkit-progress-value {
+  background-color: #222323;
+  border-radius: 7px;
+}
+/* fonts */
+h2 {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 600;
+  margin-top: 0px;
+}
+.right{
+  float: right;
+  font-size: 12px;
+}
+.star{
+ color:#FF385C;
+}
