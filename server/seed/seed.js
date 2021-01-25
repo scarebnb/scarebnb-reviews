@@ -28,7 +28,7 @@ const addReviews = (listingId) => {
   // [name, avatar, date, review, cleanliness, accuracy, comm,
   // location, check_in, value, location_id]
   const reviews = [faker.name.findName(), generator.generateRandomAvatar(),
-    faker.date.recent(), faker.lorem.paragraph(), getRand(3, 5), getRand(1, 5),
+    faker.date.between('2015-01-01', '2021-01-01'), faker.lorem.paragraph(), getRand(3, 5), getRand(1, 5),
     getRand(1, 5), getRand(3, 5), getRand(3, 5), getRand(3, 5), listingId];
 
   const reviewsQuery = `INSERT INTO reviews (name, avatar, date, review,

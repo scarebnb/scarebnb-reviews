@@ -23,9 +23,10 @@ class App extends React.Component {
     fetch(`reviews/${getRand(1, 100)}`)
       .then((res) => res.json())
       .then((data) => {
+        const sortedData = data.reviews.sort((a, b) => new Date(b.date) - new Date(a.date));
         const avg = this.averages(data);
         this.setState({
-          reviews: data,
+          reviews: sortedData,
           averages: avg,
           tags: data.reviews[0].tags,
         });

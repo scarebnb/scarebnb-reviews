@@ -5,7 +5,7 @@ import styles from '../styles/allReviews.module.css';
 const AllReviews = ({ reviews }) => (
   <div className={styles.wrapper}>
     <div className={styles.rightSection}>
-      {reviews.reviews.map((review, i) => (
+      {reviews.map((review, i) => (
         <div className={styles.reviewWrapper} key={i}>
           <div className={styles.avatar}>
             <img src={review.avatar} alt="profile pic" />
