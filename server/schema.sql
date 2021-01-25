@@ -1,3 +1,10 @@
+-- ---
+-- Create DB if it is first launch
+-- Drop then create added for dev
+-- ---
+
+CREATE DATABASE IF NOT EXISTS `reviews`;
+
 DROP DATABASE `reviews`;
 
 CREATE DATABASE IF NOT EXISTS `reviews`;
