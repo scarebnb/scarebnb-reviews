@@ -40,15 +40,17 @@ const format = (res) => {
     }
 
     // add corresponding tags to review
-    data.reviews[currentReview].tags.push(v.tag);
+    if (data.reviews[currentReview]) {
+      data.reviews[currentReview].tags.push(v.tag);
 
-    // add tags based on review id
-    if (reviewIds[currentReview] !== v.review_id) {
+      // add tags based on review id
+      if (reviewIds[currentReview] !== v.review_id) {
       // convert reviews to set then back to array to ignore
       // potential duplicates
-      data.reviews[currentReview].tags = [...new Set(data.reviews[currentReview].tags)];
+        data.reviews[currentReview].tags = [...new Set(data.reviews[currentReview].tags)];
 
-      currentReview += 1;
+        currentReview += 1;
+      }
     }
   });
 

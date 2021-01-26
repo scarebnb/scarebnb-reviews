@@ -4,7 +4,7 @@
   "description": "### Module Represented: ***User Reviews Section***",
   "main": "index.js",
   "scripts": {
-    "dev_server" : "nodemon sever/server.js",
+    "dev_server" : "nodemon server/server.js",
     "server" : "node server/server.js",
     "config" : "mysql -u root < server/schema.sql",
     "seed" : "node server/seed/seed.js"

@@ -8,7 +8,11 @@ const AllReviews = ({ reviews }) => (
       {reviews.map((review, i) => (
         <div className={styles.reviewWrapper} key={i}>
           <div className={styles.avatar}>
-            <img src={review.avatar} alt="profile pic" />
+            <img
+              src={review.avatar}
+              className={styles.profileImg}
+              alt="profile pic"
+            />
           </div>
           <div className={styles.info}>
             <div className={styles.name}>
