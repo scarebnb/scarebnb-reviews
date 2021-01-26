@@ -32,7 +32,7 @@ const ReviewAvgs = ({ averages, tags }) => {
     <div className={styles.avgs}>
       <div className={styles.nestedAvgs}>
         <div className={styles.fullWidth}>
-          <h2>
+          <h2 className={styles.heading}>
             <span className={styles.star}>&#x2605;</span>
             {' '}
             {makeDec(overall)}

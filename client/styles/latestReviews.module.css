@@ -12,6 +12,11 @@
 .avatar {
   grid-column: 1 / 2;
 }
+.profileImg {
+  height: 56px;
+  width: 56px;
+  min-height: 56px;
+}
 .info {
   grid-column: 2 / 6;
 }
@@ -37,9 +42,4 @@
   padding-top: 10px;
   padding-bottom: 20px;
   margin-right: 96px;
-}
-img {
-  height: 56px;
-  width: 56px;
-  min-height: 56px;
 }

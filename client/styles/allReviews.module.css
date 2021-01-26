@@ -18,6 +18,11 @@
   grid-column: 1 / 2;
   align-self: center;
 }
+.profileImg {
+  height: 56px;
+  width: 56px;
+  min-height: 56px;
+}
 /* name and date */
 .info {
   grid-column: 2 / 3;
