@@ -1,0 +1,17 @@
+/* eslint-disable no-console */
+const mysql = require('mysql');
+
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'javier',
+  password: 'reviews',
+  database: 'reviews',
+  multipleStatements: true,
+});
+
+connection.connect((err) => {
+  if (err) { console.error(err); }
+  console.log('Connected to DB!');
+});
+
+module.exports = connection;
