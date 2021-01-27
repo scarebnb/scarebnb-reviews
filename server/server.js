@@ -7,13 +7,13 @@ const controllers = require('./controllers');
 const app = express();
 
 app.use(cors({
-  origin: 'http://localhost:8000',
+  origin: 'http://54.157.193.11:8000/',
 }));
 
-app.use('/bundle', express.static(path.join(__dirname, '/../client/public/bundle.js')));
-app.use('/', express.static(path.join(__dirname, '/../client/public')));
+app.use('/bundle', cors(), express.static(path.join(__dirname, '/../client/public/bundle.js')));
+app.use('/', cors(), express.static(path.join(__dirname, '/../client/public')));
 
-app.get('/reviews/:id', controllers.reviews.get);
+app.get('/reviews/:id', cors(), controllers.reviews.get);
 
 const PORT = 3002;
 
