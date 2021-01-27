@@ -15,7 +15,7 @@ app.use('/', express.static(path.join(__dirname, '/../client/public')));
 
 app.get('/reviews/:id', controllers.reviews.get);
 
-const PORT = process.env.PORT || 3002;
+const PORT = 3002;
 
 app.listen(PORT, () => {
   console.log(`Server listening on http://localhost:${PORT}`);
