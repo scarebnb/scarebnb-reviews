@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "webpack" : "webpack",
+    "webpack": "webpack",
     "dev_webpack": "webpack --watch"
   },
   "keywords": [],
