@@ -6,12 +6,14 @@ const connection = mysql.createConnection({
   user: 'javier',
   password: 'reviews',
   database: 'reviews',
-  multipleStatements: true,
 });
 
 connection.connect((err) => {
-  if (err) { console.error(err); }
-  console.log('Connected to DB!');
+  if (err) {
+    console.error(err);
+  } else {
+    console.log('Connected to DB!');
+  }
 });
 
 module.exports = connection;
