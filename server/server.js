@@ -2,9 +2,13 @@
 const express = require('express');
 const path = require('path');
 const cors = require('cors');
+const compression = require('compression');
 const controllers = require('./controllers');
 
 const app = express();
+
+// compress all responses to optimize page load speed
+app.use(compression());
 
 app.use(cors({
   origin: 'http://54.157.193.11:8000/',
