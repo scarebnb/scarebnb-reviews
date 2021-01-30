@@ -1,0 +1,19 @@
+.tag {
+  font-size: 12px !important;
+  line-height: 16px;
+  color: #222222;
+  margin: 5px;
+  background-color: Transparent;
+  border-radius: 25px;
+  padding: 8px 16px 8px 16px;
+  outline:none;
+  border-color: #B0B0B0;
+  border-style: solid;
+  border-width: thin;
+  box-shadow: none;
+}
+.tag:focus,
+.tag:hover {
+  border-color: #222222;
+  cursor: pointer;
+}

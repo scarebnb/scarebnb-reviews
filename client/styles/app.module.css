@@ -8,7 +8,7 @@ hr{
   background-color: #DDDDDD;
   border: none;
 }
-button {
+.btn {
   background-color: Transparent;
   border-radius: 25px;
   padding: 8px 16px 8px 16px;
@@ -18,12 +18,12 @@ button {
   border-width: thin;
   box-shadow: none;
 }
-button:focus,
-button:hover {
+.btn:focus,
+.btn:hover {
   border-color: #222222;
   cursor: pointer;
 }
-button:active {
+.btn:active {
   animation: press 0.2s;
   transform: scale(0.95);
 }

@@ -21,6 +21,7 @@ class App extends React.Component {
     const getRand = (min, max) => Math.floor(Math.random() * (max - min) + min);
 
     fetch(`http://13.52.77.176:3002/reviews/${getRand(1, 100)}`)
+    // fetch(`/reviews/${getRand(1, 100)}`)
       .then((res) => res.json())
       .then((data) => {
         const sortedData = data.reviews.sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -92,7 +93,12 @@ class App extends React.Component {
           <ReviewAvgs averages={averages} tags={tags} />
           <div className={styles.reviews}>
             <LatestReviews reviews={reviews} />
-            <button type="button" onClick={this.showAll} id={styles.showAll}>
+            <button
+              type="button"
+              className={styles.btn}
+              onClick={this.showAll}
+              id={styles.showAll}
+            >
               Show all
               {' '}
               {averages.totalReviews}
