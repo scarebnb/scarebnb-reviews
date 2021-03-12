@@ -1,72 +1,79 @@
-# Front-End Capstone Project: Airbnb Page Mock-Up
+<center>
+  <img src="https://cdn.onlinewebfonts.com/svg/img_431018.png" alt="drawing" height="100" width="100"/>
+  <h2 fontFamily='Roboto' fontSize='22px' x="0" y="15" fill="black">scarebnb</h2>
+</center>
 
-### Module Represented: ***User Reviews Section***
+# Review Module for Scarebnb
 
-### **Getting Started**
+Scarebnb review module microservice developed along with 3 other microservices [Carousel Module](https://github.com/hrr50-airbnb-clone/ash-air-bnb-clone), [Lodging and Info Module](https://github.com/hrr50-airbnb-clone/ren-air-bnb-clone) and [More Places to Stay Module](https://github.com/hrr50-airbnb-clone/joshua-air-bnb-clone). Developed with a _MERN_ stack (MySQL, Express, React, Node). All feed trough a [proxy](https://github.com/hrr50-airbnb-clone/ren-proxy-server) to render the booking page for Scarebnb.
 
-Install necessary node packages
+## Requirements
 
-`cd server`
+- [Node](https://nodejs.org/en/download/)
+- [MySQL](https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/)
 
-`npm install`
+## Quick Start
 
-`cd ../client`
+1. Clone the Repo
+2. Run `npm install` to install the required dependencies
 
-`npm install`
+```
+npm install
+```
 
-**Server Set Up**
+3. Set up database configuration
 
-Initialinize database
+```
+npm run config
+```
 
-cd over to root of repo:
+> WARNING:
+> &nbsp;_if you have an existing reviews database it will be dropped and replaced_
 
-`cd ..`
+> consider modifying `server/schema.sql` and `server/db/index.js`
 
-`npm run config`
+4. Seed the database
 
-Seed database with fake data
+```
+npm run seed
+```
 
-`npm run seed`
+5. start the server
 
-run server
+- For development running with nodemon
 
-`npm run server`
+```
+npm run server:dev
+```
 
-**Client Set Up**
+- For deployment
 
-cd to client directory
+```
+npm run server
+```
 
-`cd client`
+6. Build client bundle
 
-Create webpack bundle
+- For development webpack build with watch flag
 
-`npm run webpack`
+```
+npm run bundle:dev
+```
+
+- For deployment
+
+```
+npm run bundle
+```
 
 ---
 
-**Development**
+## Testing
 
-***client***
-
-make sure you are in the client directory
-
-run webpack and watch for changes
-
-`npm run dev_wwebpack`
-
-***server***
-
-##### Open New Terminal Window
-
-make sure you are in server directory
-
-`npm run dev_server`
-
-
----
-
-**Testing**
 **Server side testing**
-Make sure you are inside the server folder
 
-run test suite `npm run test`
+1. run test suite
+
+```
+npm run test
+```

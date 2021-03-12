@@ -1,3 +1,3 @@
 server/tests/
 client/public/bundle.js
-client/webpack.config.js
+webpack.config.js

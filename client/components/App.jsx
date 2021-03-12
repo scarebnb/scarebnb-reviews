@@ -1,9 +1,9 @@
 /* eslint-disable import/extensions */
-import React from 'react';
-import ReviewAvgs from './ReviewAvgs.jsx';
-import LatestReviews from './LatestReviews.jsx';
-import ReviewsModal from './ReviewsModal.jsx';
-import styles from '../styles/app.module.css';
+import React from "react";
+import ReviewAvgs from "./ReviewAvgs.jsx";
+import LatestReviews from "./LatestReviews.jsx";
+import ReviewsModal from "./ReviewsModal.jsx";
+import styles from "../styles/app.module.css";
 
 class App extends React.Component {
   constructor(props) {
@@ -20,11 +20,14 @@ class App extends React.Component {
   componentDidMount() {
     const getRand = (min, max) => Math.floor(Math.random() * (max - min) + min);
 
-    fetch(`http://13.52.77.176:3002/reviews/${getRand(1, 100)}`)
-    // fetch(`/reviews/${getRand(1, 100)}`)
+    // uncomment for deployment referencing EC2 instance
+    // fetch(`http://13.52.77.176:3002/reviews/${getRand(1, 100)}`)
+    fetch(`/reviews/${getRand(1, 100)}`)
       .then((res) => res.json())
       .then((data) => {
-        const sortedData = data.reviews.sort((a, b) => new Date(b.date) - new Date(a.date));
+        const sortedData = data.reviews.sort(
+          (a, b) => new Date(b.date) - new Date(a.date)
+        );
         const avg = this.averages(data);
         this.setState({
           reviews: sortedData,
@@ -82,9 +85,7 @@ class App extends React.Component {
   }
 
   render() {
-    const {
-      reviews, averages, tags, showAllReviews,
-    } = this.state;
+    const { reviews, averages, tags, showAllReviews } = this.state;
     return (
       <div className={styles.reviewSection}>
         <hr />
@@ -99,24 +100,19 @@ class App extends React.Component {
               onClick={this.showAll}
               id={styles.showAll}
             >
-              Show all
-              {' '}
-              {averages.totalReviews}
-              {' '}
-              reviews
+              Show all {averages.totalReviews} reviews
             </button>
           </div>
         </div>
         {/* All Reviews Pop Up Modal */}
-        {showAllReviews
-          ? (
-            <ReviewsModal
-              reviews={reviews}
-              averages={averages}
-              tags={tags}
-              showAll={this.showAll}
-            />
-          ) : null}
+        {showAllReviews ? (
+          <ReviewsModal
+            reviews={reviews}
+            averages={averages}
+            tags={tags}
+            showAll={this.showAll}
+          />
+        ) : null}
         <hr />
       </div>
     );
