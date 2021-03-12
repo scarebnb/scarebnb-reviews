@@ -5,7 +5,7 @@
 
 # Review Module for Scarebnb
 
-Scarebnb review module microservice developed along with 3 other microservices [Carousel Module](https://github.com/hrr50-airbnb-clone/ash-air-bnb-clone), [Lodging and Info Module](https://github.com/hrr50-airbnb-clone/ren-air-bnb-clone) and [More Places to Stay Module](https://github.com/hrr50-airbnb-clone/joshua-air-bnb-clone). Developed with a _MERN_ stack (MySQL, Express, React, Node). All feed trough a [proxy](https://github.com/hrr50-airbnb-clone/ren-proxy-server) to render the booking page for Scarebnb.
+Scarebnb review module microservice developed along with 3 other microservices [Carousel Module](https://github.com/hrr50-airbnb-clone/ash-air-bnb-clone), [Lodging and Info Module](https://github.com/hrr50-airbnb-clone/ren-air-bnb-clone) and [More Places to Stay Module](https://github.com/hrr50-airbnb-clone/joshua-air-bnb-clone). Developed with a _MERN_ stack (MySQL, Express, React, Node). All feed through a [proxy](https://github.com/hrr50-airbnb-clone/ren-proxy-server) to render the booking page for Scarebnb.
 
 ## Requirements
 
