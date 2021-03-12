@@ -1,6 +1,6 @@
 <center>
-  <img src="https://cdn.onlinewebfonts.com/svg/img_431018.png" alt="drawing" height="100" width="100"/>
-  <h2 fontFamily='Roboto' fontSize='22px' x="0" y="15" fill="black">scarebnb</h2>
+  <img src="./client/public/logo.png" alt="drawing" height="100" width="100" />
+  <h2 style="text-shadow: 2px 2px #505050;" fontFamily='Roboto' fontSize='22px' x="0" y="15" fill="black">scarebnb</h2>
 </center>
 
 # Review Module for Scarebnb
@@ -27,8 +27,9 @@ npm install
 npm run config
 ```
 
-> WARNING:
-> &nbsp;_if you have an existing reviews database it will be dropped and replaced_
+> <span style="color:red">WARNING:</span>
+
+> &nbsp;if you have an existing **_*reviews database*_** it will be dropped and replaced
 
 > consider modifying `server/schema.sql` and `server/db/index.js`
 
