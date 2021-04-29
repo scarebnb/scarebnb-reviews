@@ -14,15 +14,15 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/javalzar1/fec-airbnb-clone-javier.git"
+		"url": "git+https://github.com/scarebnb/scarebnb-reviews.git"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/javalzar1/fec-airbnb-clone-javier/issues"
+		"url": "https://github.com/scarebnb/scarebnb-reviews/issues"
 	},
-	"homepage": "https://github.com/javalzar1/fec-airbnb-clone-javier#readme",
+	"homepage": "https://github.com/scarebnb/scarebnb-reviews#readme",
 	"devDependencies": {
 		"eslint": "^7.18.0",
 		"eslint-config-airbnb": "^18.2.1",
