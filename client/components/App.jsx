@@ -5,6 +5,7 @@ import LatestReviews from "./LatestReviews.jsx";
 import ReviewsModal from "./ReviewsModal.jsx";
 import styles from "../styles/app.module.css";
 
+
 class App extends React.Component {
   constructor(props) {
     super(props);
